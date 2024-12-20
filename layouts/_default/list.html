@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="bg-gray-50 py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Display the section title and main content -->
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ .Title }}</h1>
+    <div class="prose max-w-none text-gray-700 mb-8">
+      {{ .Content | safeHTML }}
+    </div>
+
+    <!-- If this section has pages, display them here -->
+    {{ if .Pages }}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {{ range .Pages }}
+        <div class="p-4 border rounded hover:shadow transition-shadow">
+          <a href="{{ .Permalink }}" class="block text-center">
+            <!-- If there's a featured image param, show it -->
+            {{ if .Params.featured_image }}
+              <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="mx-auto mb-4 h-32 object-contain" />
+            {{ end }}
+            <h2 class="text-xl font-semibold text-gray-800">{{ .Title }}</h2>
+            <!-- If the page has a summary or description -->
+            <p class="text-gray-600 mt-2">{{ .Summary }}</p>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo/Brand Name -->
     <a href="/" class="flex items-center space-x-2">
-      <!-- You can add a small Michelin-inspired logo or just text -->
+      <!-- Add a logo image under static/images/logo.png -->
       <img src="/images/logo.png" alt="Logo" class="h-8 w-auto" />
       <span class="text-xl font-bold">Michelin Tires</span>
     </a>
@@ -10,14 +10,16 @@
     <!-- Desktop Nav -->
     <nav class="hidden md:flex space-x-6">
       <a href="/" class="hover:text-[#FFCD00] transition-colors">Home</a>
-      <a href="/tires" class="hover:text-[#FFCD00] transition-colors">Tires</a>
+      <a href="/rally" class="hover:text-[#FFCD00] transition-colors">Rally</a>
+      <a href="/circuit" class="hover:text-[#FFCD00] transition-colors">Circuit</a>
+      <a href="/hillclimbing" class="hover:text-[#FFCD00] transition-colors">Hillclimbing</a>
+      <a href="/raid" class="hover:text-[#FFCD00] transition-colors">Raid</a>
       <a href="/contact" class="hover:text-[#FFCD00] transition-colors">Contact Us</a>
     </nav>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
       <button id="mobile-menu-button" class="text-white focus:outline-none hover:text-[#FFCD00]">
-        <!-- Use a hamburger icon (if you have heroicons or similar) -->
         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
           <path d="M3 6h18M3 12h18M3 18h18" />
         </svg>
@@ -29,7 +31,10 @@
   <div id="mobile-menu" class="md:hidden hidden bg-[#004B93]">
     <nav class="px-2 pb-3 space-y-1">
       <a href="/" class="block px-3 py-2 hover:bg-[#003366] rounded">Home</a>
-      <a href="/tires" class="block px-3 py-2 hover:bg-[#003366] rounded">Tires</a>
+      <a href="/rally" class="block px-3 py-2 hover:bg-[#003366] rounded">Rally</a>
+      <a href="/circuit" class="block px-3 py-2 hover:bg-[#003366] rounded">Circuit</a>
+      <a href="/hillclimbing" class="block px-3 py-2 hover:bg-[#003366] rounded">Hillclimbing</a>
+      <a href="/raid" class="block px-3 py-2 hover:bg-[#003366] rounded">Raid</a>
       <a href="/contact" class="block px-3 py-2 hover:bg-[#003366] rounded">Contact Us</a>
     </nav>
   </div>
@@ -42,4 +47,3 @@
     });
   </script>
 </header>
-
