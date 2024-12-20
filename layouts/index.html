@@ -1,7 +1,36 @@
 {{ define "main" }}
-<div class="container mx-auto p-4">
-  <h1 class="text-3xl font-bold">Welcome to Michelin Tires</h1>
-  <p class="mt-2 text-lg">Explore our catalog of high-performance tires.</p>
-</div>
+<section class="relative bg-cover bg-center h-80" style="background-image: url('/images/hero-background.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="text-center text-white">
+      <h1 class="text-4xl md:text-5xl font-bold">MICHELIN RACING TYRE RANGE</h1>
+      <p class="text-lg mt-2">Please choose your tyre application</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Example tire categories with images and labels -->
+    <a href="/tires/asphalt" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
+      <img src="/images/asphalt-tire.jpg" alt="Asphalt Tire" class="mx-auto mb-4 h-32 object-contain" />
+      <h2 class="text-xl font-semibold text-gray-800">Asphalt</h2>
+    </a>
+
+    <a href="/tires/gravel" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
+      <img src="/images/gravel-tire.jpg" alt="Gravel Tire" class="mx-auto mb-4 h-32 object-contain" />
+      <h2 class="text-xl font-semibold text-gray-800">Gravel</h2>
+    </a>
+
+    <a href="/tires/snow-ice" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
+      <img src="/images/snow-ice-tire.jpg" alt="Snow & Ice Tire" class="mx-auto mb-4 h-32 object-contain" />
+      <h2 class="text-xl font-semibold text-gray-800">Snow & Ice</h2>
+    </a>
+
+    <a href="/tires/raid" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
+      <img src="/images/raid-tire.jpg" alt="Raid Tire" class="mx-auto mb-4 h-32 object-contain" />
+      <h2 class="text-xl font-semibold text-gray-800">Raid</h2>
+    </a>
+  </div>
+</section>
 {{ end }}
 

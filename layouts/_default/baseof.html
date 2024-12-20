@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-white">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,17 @@
   {{ $style := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") | minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
-<body class="bg-white text-gray-900">
-  {{- block "main" . }}{{- end }}
+<body class="flex flex-col min-h-screen text-gray-900">
+  <!-- Header/Nav -->
+  {{ partial "header.html" . }}
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- Footer -->
+  {{ partial "footer.html" . }}
 </body>
 </html>
-
 
