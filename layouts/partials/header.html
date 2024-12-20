@@ -2,16 +2,34 @@
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo/Brand Name -->
     <a href="/" class="flex items-center space-x-2">
-      <!-- Add a logo image under static/images/logo.png -->
       <img src="/images/PS_logo.png" alt="Logo" class="h-8 w-auto" />
       <span class="text-xl font-bold">Michelin Tires</span>
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-6">
+    <nav class="hidden md:flex space-x-6 items-center">
       <a href="/" class="hover:text-[#FFCD00] transition-colors">Home</a>
-      <a href="/rally" class="hover:text-[#FFCD00] transition-colors">Rally</a>
-      <a href="/circuit" class="hover:text-[#FFCD00] transition-colors">Circuit</a>
+
+      <!-- Rally Dropdown -->
+      <div class="relative group">
+        <button class="hover:text-[#FFCD00] transition-colors">Rally</button>
+        <div class="absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-50">
+          <a href="/rally/asphalt" class="block px-4 py-2 hover:bg-[#003366]">Asphalt</a>
+          <a href="/rally/gravel_and_autocross" class="block px-4 py-2 hover:bg-[#003366]">Gravel & Autocross</a>
+          <a href="/rally/snow_and_ice" class="block px-4 py-2 hover:bg-[#003366]">Snow & Ice</a>
+        </div>
+      </div>
+
+      <!-- Circuit Dropdown -->
+      <div class="relative group">
+        <button class="hover:text-[#FFCD00] transition-colors">Circuit</button>
+        <div class="absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-50">
+          <a href="/circuit/prototype_formula" class="block px-4 py-2 hover:bg-[#003366]">Prototype Formula</a>
+          <a href="/circuit/touring_and_gt" class="block px-4 py-2 hover:bg-[#003366]">Touring & GT</a>
+          <a href="/circuit/porsche_cup_tyres" class="block px-4 py-2 hover:bg-[#003366]">Porsche Cup Tyres</a>
+        </div>
+      </div>
+
       <a href="/hillclimbing" class="hover:text-[#FFCD00] transition-colors">Hillclimbing</a>
       <a href="/raid" class="hover:text-[#FFCD00] transition-colors">Raid</a>
       <a href="/contact" class="hover:text-[#FFCD00] transition-colors">Contact Us</a>
@@ -27,12 +45,20 @@
     </div>
   </div>
 
-  <!-- Mobile Nav (hidden by default) -->
+  <!-- Mobile Nav (Use nested menus or just show all as links) -->
   <div id="mobile-menu" class="md:hidden hidden bg-[#004B93]">
     <nav class="px-2 pb-3 space-y-1">
       <a href="/" class="block px-3 py-2 hover:bg-[#003366] rounded">Home</a>
-      <a href="/rally" class="block px-3 py-2 hover:bg-[#003366] rounded">Rally</a>
-      <a href="/circuit" class="block px-3 py-2 hover:bg-[#003366] rounded">Circuit</a>
+      <!-- Direct sub-links for Rally -->
+      <a href="/rally/asphalt" class="block px-3 py-2 hover:bg-[#003366] rounded">Asphalt (Rally)</a>
+      <a href="/rally/gravel_and_autocross" class="block px-3 py-2 hover:bg-[#003366] rounded">Gravel & Autocross (Rally)</a>
+      <a href="/rally/snow_and_ice" class="block px-3 py-2 hover:bg-[#003366] rounded">Snow & Ice (Rally)</a>
+
+      <!-- Circuit sub-links -->
+      <a href="/circuit/prototype_formula" class="block px-3 py-2 hover:bg-[#003366] rounded">Prototype Formula (Circuit)</a>
+      <a href="/circuit/touring_and_gt" class="block px-3 py-2 hover:bg-[#003366] rounded">Touring & GT (Circuit)</a>
+      <a href="/circuit/porsche_cup_tyres" class="block px-3 py-2 hover:bg-[#003366] rounded">Porsche Cup Tyres (Circuit)</a>
+
       <a href="/hillclimbing" class="block px-3 py-2 hover:bg-[#003366] rounded">Hillclimbing</a>
       <a href="/raid" class="block px-3 py-2 hover:bg-[#003366] rounded">Raid</a>
       <a href="/contact" class="block px-3 py-2 hover:bg-[#003366] rounded">Contact Us</a>
@@ -40,7 +66,7 @@
   </div>
 
   <script>
-    // Simple toggle for mobile menu
+    // Toggle for mobile menu
     document.getElementById('mobile-menu-button').addEventListener('click', () => {
       const mobileMenu = document.getElementById('mobile-menu');
       mobileMenu.classList.toggle('hidden');
