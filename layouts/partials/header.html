@@ -7,25 +7,41 @@
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-6 items-center">
+    <nav class="hidden md:flex items-center space-x-6">
       <a href="/" class="hover:text-[#FFCD00] transition-colors">Home</a>
 
       <!-- Rally Dropdown -->
-      <div class="relative group inline-block">
-        <button class="hover:text-[#FFCD00] transition-colors">Rally</button>
-        <div class="absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity z-50 whitespace-nowrap">
+      <div class="relative inline-block">
+        <button 
+          class="hover:text-[#FFCD00] transition-colors"
+          onclick="toggleDropdown('rally-dropdown')"
+        >
+          Rally
+        </button>
+        <div 
+          id="rally-dropdown"
+          class="hidden absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg z-50"
+        >
           <a href="/rally/asphalt" class="block px-4 py-2 hover:bg-[#003366]">Asphalt</a>
-          <a href="/rally/gravel_and_autocross" class="block px-4 py-2 hover:bg-[#003366]">Gravel & Autocross</a>
-          <a href="/rally/snow_and_ice" class="block px-4 py-2 hover:bg-[#003366]">Snow & Ice</a>
+          <a href="/rally/gravel_and_autocross" class="block px-4 py-2 hover:bg-[#003366]">Gravel &amp; Autocross</a>
+          <a href="/rally/snow_and_ice" class="block px-4 py-2 hover:bg-[#003366]">Snow &amp; Ice</a>
         </div>
       </div>
 
       <!-- Circuit Dropdown -->
-      <div class="relative group inline-block">
-        <button class="hover:text-[#FFCD00] transition-colors">Circuit</button>
-        <div class="absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-50 whitespace-nowrap">
+      <div class="relative inline-block">
+        <button 
+          class="hover:text-[#FFCD00] transition-colors"
+          onclick="toggleDropdown('circuit-dropdown')"
+        >
+          Circuit
+        </button>
+        <div 
+          id="circuit-dropdown"
+          class="hidden absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg z-50"
+        >
           <a href="/circuit/prototype_formula" class="block px-4 py-2 hover:bg-[#003366]">Prototype Formula</a>
-          <a href="/circuit/touring_and_gt" class="block px-4 py-2 hover:bg-[#003366]">Touring & GT</a>
+          <a href="/circuit/touring_and_gt" class="block px-4 py-2 hover:bg-[#003366]">Touring &amp; GT</a>
           <a href="/circuit/porsche_cup_tyres" class="block px-4 py-2 hover:bg-[#003366]">Porsche Cup Tyres</a>
         </div>
       </div>
@@ -51,12 +67,12 @@
       <a href="/" class="block px-3 py-2 hover:bg-[#003366] rounded">Home</a>
       <!-- Direct sub-links for Rally -->
       <a href="/rally/asphalt" class="block px-3 py-2 hover:bg-[#003366] rounded">Asphalt (Rally)</a>
-      <a href="/rally/gravel_and_autocross" class="block px-3 py-2 hover:bg-[#003366] rounded">Gravel & Autocross (Rally)</a>
-      <a href="/rally/snow_and_ice" class="block px-3 py-2 hover:bg-[#003366] rounded">Snow & Ice (Rally)</a>
+      <a href="/rally/gravel_and_autocross" class="block px-3 py-2 hover:bg-[#003366] rounded">Gravel &amp; Autocross (Rally)</a>
+      <a href="/rally/snow_and_ice" class="block px-3 py-2 hover:bg-[#003366] rounded">Snow &amp; Ice (Rally)</a>
 
       <!-- Circuit sub-links -->
       <a href="/circuit/prototype_formula" class="block px-3 py-2 hover:bg-[#003366] rounded">Prototype Formula (Circuit)</a>
-      <a href="/circuit/touring_and_gt" class="block px-3 py-2 hover:bg-[#003366] rounded">Touring & GT (Circuit)</a>
+      <a href="/circuit/touring_and_gt" class="block px-3 py-2 hover:bg-[#003366] rounded">Touring &amp; GT (Circuit)</a>
       <a href="/circuit/porsche_cup_tyres" class="block px-3 py-2 hover:bg-[#003366] rounded">Porsche Cup Tyres (Circuit)</a>
 
       <a href="/hillclimbing" class="block px-3 py-2 hover:bg-[#003366] rounded">Hillclimbing</a>
@@ -71,5 +87,13 @@
       const mobileMenu = document.getElementById('mobile-menu');
       mobileMenu.classList.toggle('hidden');
     });
+
+    // Toggle for desktop dropdowns
+    function toggleDropdown(dropdownId) {
+      // If you want only one dropdown open at a time, close any other open dropdown here
+      // For now, we just toggle the given dropdown
+      const dropdown = document.getElementById(dropdownId);
+      dropdown.classList.toggle('hidden');
+    }
   </script>
 </header>
