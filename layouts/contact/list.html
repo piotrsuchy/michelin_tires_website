@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Header Section -->
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold text-gray-800">Contact Us</h1>
+    <p class="mt-4 text-gray-600 text-lg">
+      We’d love to hear from you! Please feel free to reach out via phone or email, 
+      or by filling out the form below.
+    </p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="flex flex-col md:flex-row md:space-x-12 items-center md:items-start">
+    <!-- Contact Info -->
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <div class="bg-gray-100 shadow rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Contact Information</h3>
+        <p class="text-gray-700">
+          <strong>Phone:</strong> +420 482 311 677<br />
+          <strong>Email:</strong> info@example.com
+        </p>
+        <p class="text-gray-500 mt-4">
+          Monday – Friday: 9:00 – 17:00
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="md:w-1/2">
+      <form class="bg-white shadow-sm rounded-lg px-8 py-6">
+        <!-- Name -->
+        <div class="mb-6">
+          <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
+            placeholder="Your Name"
+          />
+        </div>
+        <!-- Email -->
+        <div class="mb-6">
+          <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
+            placeholder="Your Email"
+          />
+        </div>
+        <!-- Message -->
+        <div class="mb-6">
+          <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+          <textarea 
+            id="message" 
+            rows="4" 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
+            placeholder="Your Message"></textarea>
+        </div>
+        <!-- Submit -->
+        <div class="text-right">
+          <button 
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{ end }}
