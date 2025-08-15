@@ -15,7 +15,7 @@ Pages & Subpages
 - Circuit: Prototype Formula & Single-Seater
   - Pilot Sport M S512 / P512
   - Pilot Sport Legends S819 / P219
-- Circuit: Touring & GT
+- Circuit: Touring GT
   - Pilot Sport Pro GT
   - Pilot Sport Cup GT
   - Pilot Sport Cup T
