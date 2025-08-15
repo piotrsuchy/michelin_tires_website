@@ -2,8 +2,8 @@
 <section>
   <!-- Banner Section -->
   {{ if .Params.banner_image }}
-  <div class="relative w-full h-48 md:h-64 bg-cover bg-center"
-    style="background-image: url('{{ .Params.featured_image }}');">
+  <div class="relative w-full h-48 md:h-64"
+    style="background-image: url('{{ .Params.banner_image }}'); {{ if .Params.banner_position }}background-position: {{ .Params.banner_position }};{{ else }}background-position: center;{{ end }} {{ if .Params.banner_size }}background-size: {{ .Params.banner_size }};{{ else }}background-size: cover;{{ end }}">
     <!-- Optional Overlay (if needed) -->
     <div class="absolute inset-0 bg-black bg-opacity-30"></div>
   </div>

@@ -1,7 +1,7 @@
 ---
 title: "Touring & GT"
 featured_image: "/images/circuit-touring-gt.png"
-banner_image: "/images/background.png"
+banner_image: "/images/background/touring-gt.jpg"
 ---
 Michelin touring and GT tires are engineered for high-performance circuit racing, delivering exceptional grip, precision, and reliability for competitive motorsport.
 
