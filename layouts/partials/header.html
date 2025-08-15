@@ -1,93 +1,238 @@
-<header class="bg-[#004B93] text-white">
+<header class="bg-[#004B93] text-white shadow-lg">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo/Brand Name -->
-    <a href="/" class="flex items-center space-x-2">
+    <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
       <img src="/images/michelin_logo_2.png" alt="Logo" class="h-8 w-auto" />
-      <span class="text-xl font-bold">Piotr Suchy Motorsport </span>
+      <span class="text-xl font-bold">Piotr Suchy Motorsport</span>
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center space-x-6">
-      <a href="/" class="hover:text-[#FFCD00] transition-colors">Home</a>
+    <nav class="hidden md:flex items-center space-x-1">
+      <a href="/"
+        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Home</a>
 
       <!-- Rally Dropdown -->
-      <div class="relative inline-block">
-        <button class="hover:text-[#FFCD00] transition-colors" onclick="toggleDropdown('rally-dropdown')">
+      <div class="relative">
+        <button
+          class="dropdown-toggle px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200 flex items-center"
+          data-dropdown="rally-dropdown">
           Rally
+          <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
         </button>
         <div id="rally-dropdown"
-          class="hidden absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg z-50">
-          <a href="/rally/asphalt" class="block px-4 py-2 hover:bg-[#003366]">Asphalt</a>
-          <a href="/rally/gravel" class="block px-4 py-2 hover:bg-[#003366]">Gravel</a>
-          <a href="/rally/snow_and_ice" class="block px-4 py-2 hover:bg-[#003366]">Snow &amp; Ice</a>
+          class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 opacity-0 invisible transform scale-95 transition-all duration-200 ease-out">
+          <div class="py-1">
+            <a href="/rally/asphalt"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Asphalt</a>
+            <a href="/rally/gravel"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Gravel</a>
+            <a href="/rally/snow_and_ice"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Snow
+              & Ice</a>
+          </div>
         </div>
       </div>
 
       <!-- Circuit Dropdown -->
-      <div class="relative inline-block">
-        <button class="hover:text-[#FFCD00] transition-colors" onclick="toggleDropdown('circuit-dropdown')">
+      <div class="relative">
+        <button
+          class="dropdown-toggle px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200 flex items-center"
+          data-dropdown="circuit-dropdown">
           Circuit
+          <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
         </button>
         <div id="circuit-dropdown"
-          class="hidden absolute left-0 mt-2 bg-[#004B93] text-white py-2 rounded shadow-lg z-50">
-          <a href="/circuit/prototype_formula" class="block px-4 py-2 hover:bg-[#003366]">Prototype Formula</a>
-          <a href="/circuit/touring_gt" class="block px-4 py-2 hover:bg-[#003366]">Touring GT</a>
-          <a href="/circuit/porsche_cup_tyres" class="block px-4 py-2 hover:bg-[#003366]">Porsche Cup Tyres</a>
+          class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 opacity-0 invisible transform scale-95 transition-all duration-200 ease-out">
+          <div class="py-1">
+            <a href="/circuit/prototype_formula"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Prototype
+              Formula</a>
+            <a href="/circuit/touring_gt"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Touring
+              GT</a>
+            <a href="/circuit/porsche_cup_tyres"
+              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Porsche
+              Cup Tyres</a>
+          </div>
         </div>
       </div>
 
-      <a href="/hillclimbing" class="hover:text-[#FFCD00] transition-colors">Hillclimbing</a>
-      <a href="/raid" class="hover:text-[#FFCD00] transition-colors">Raid</a>
-      <a href="/contact" class="hover:text-[#FFCD00] transition-colors">Contact Us</a>
+      <a href="/hillclimbing"
+        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Hillclimbing</a>
+      <a href="/raid"
+        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Raid</a>
+      <a href="/contact"
+        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Contact Us</a>
     </nav>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
-      <button id="mobile-menu-button" class="text-white focus:outline-none hover:text-[#FFCD00]">
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path d="M3 6h18M3 12h18M3 18h18" />
+      <button id="mobile-menu-button"
+        class="p-2 rounded-md hover:bg-[#003366] focus:outline-none focus:ring-2 focus:ring-[#FFCD00] transition-colors">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Nav (Use nested menus or just show all as links) -->
-  <div id="mobile-menu" class="md:hidden hidden bg-[#004B93]">
-    <nav class="px-2 pb-3 space-y-1">
-      <a href="/" class="block px-3 py-2 hover:bg-[#003366] rounded">Home</a>
-      <!-- Direct sub-links for Rally -->
-      <a href="/rally/asphalt" class="block px-3 py-2 hover:bg-[#003366] rounded">Asphalt (Rally)</a>
-      <a href="/rally/gravel" class="block px-3 py-2 hover:bg-[#003366] rounded">Gravel
-        (Rally)</a>
-      <a href="/rally/snow_and_ice" class="block px-3 py-2 hover:bg-[#003366] rounded">Snow &amp; Ice (Rally)</a>
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="md:hidden hidden bg-[#003366] border-t border-[#002244]">
+    <nav class="px-4 py-3 space-y-1">
+      <a href="/" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Home</a>
 
-      <!-- Circuit sub-links -->
-      <a href="/circuit/prototype_formula" class="block px-3 py-2 hover:bg-[#003366] rounded">Prototype Formula
-        (Circuit)</a>
-      <a href="/circuit/touring_gt" class="block px-3 py-2 hover:bg-[#003366] rounded">Touring GT
-        (Circuit)</a>
-      <a href="/circuit/porsche_cup_tyres" class="block px-3 py-2 hover:bg-[#003366] rounded">Porsche Cup Tyres
-        (Circuit)</a>
+      <!-- Rally Mobile Section -->
+      <div class="py-1">
+        <div class="px-3 py-1 text-[#FFCD00] font-semibold text-sm uppercase tracking-wide">Rally</div>
+        <a href="/rally/asphalt"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Asphalt</a>
+        <a href="/rally/gravel"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Gravel</a>
+        <a href="/rally/snow_and_ice"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Snow & Ice</a>
+      </div>
 
-      <a href="/hillclimbing" class="block px-3 py-2 hover:bg-[#003366] rounded">Hillclimbing</a>
-      <a href="/raid" class="block px-3 py-2 hover:bg-[#003366] rounded">Raid</a>
-      <a href="/contact" class="block px-3 py-2 hover:bg-[#003366] rounded">Contact Us</a>
+      <!-- Circuit Mobile Section -->
+      <div class="py-1">
+        <div class="px-3 py-1 text-[#FFCD00] font-semibold text-sm uppercase tracking-wide">Circuit</div>
+        <a href="/circuit/prototype_formula"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Prototype Formula</a>
+        <a href="/circuit/touring_gt"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Touring GT</a>
+        <a href="/circuit/porsche_cup_tyres"
+          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Porsche Cup Tyres</a>
+      </div>
+
+      <a href="/hillclimbing" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Hillclimbing</a>
+      <a href="/raid" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Raid</a>
+      <a href="/contact" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Contact Us</a>
     </nav>
   </div>
+</header>
 
-  <script>
-    // Toggle for mobile menu
-    document.getElementById('mobile-menu-button').addEventListener('click', () => {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('hidden');
+<script>
+  // Modern dropdown functionality
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    // Desktop dropdown functionality
+    dropdownToggles.forEach(toggle => {
+      const dropdownId = toggle.getAttribute('data-dropdown');
+      const dropdown = document.getElementById(dropdownId);
+      const arrow = toggle.querySelector('svg');
+
+      // Toggle dropdown on click
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        // Close all other dropdowns
+        dropdownMenus.forEach(menu => {
+          if (menu.id !== dropdownId) {
+            closeDropdown(menu);
+          }
+        });
+
+        // Toggle current dropdown
+        if (dropdown.classList.contains('opacity-0')) {
+          openDropdown(dropdown, arrow);
+        } else {
+          closeDropdown(dropdown, arrow);
+        }
+      });
+
+      // Hover effects for better UX
+      toggle.addEventListener('mouseenter', function () {
+        if (!dropdown.classList.contains('opacity-0')) return;
+
+        // Close other dropdowns on hover
+        dropdownMenus.forEach(menu => {
+          if (menu.id !== dropdownId) {
+            closeDropdown(menu);
+          }
+        });
+
+        openDropdown(dropdown, arrow);
+      });
+
+      // Keep dropdown open when hovering over it
+      dropdown.addEventListener('mouseenter', function () {
+        openDropdown(dropdown, arrow);
+      });
+
+      // Close dropdown when mouse leaves the container
+      toggle.parentElement.addEventListener('mouseleave', function () {
+        setTimeout(() => {
+          if (!toggle.parentElement.matches(':hover')) {
+            closeDropdown(dropdown, arrow);
+          }
+        }, 150);
+      });
     });
 
-    // Toggle for desktop dropdowns
-    function toggleDropdown(dropdownId) {
-      // If you want only one dropdown open at a time, close any other open dropdown here
-      // For now, we just toggle the given dropdown
-      const dropdown = document.getElementById(dropdownId);
-      dropdown.classList.toggle('hidden');
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function () {
+      dropdownMenus.forEach(menu => closeDropdown(menu));
+    });
+
+    // Mobile menu functionality
+    mobileMenuButton.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking on links
+    mobileMenu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Helper functions
+    function openDropdown(dropdown, arrow = null) {
+      dropdown.classList.remove('opacity-0', 'invisible', 'scale-95');
+      dropdown.classList.add('opacity-100', 'visible', 'scale-100');
+      if (arrow) {
+        arrow.classList.add('rotate-180');
+      }
     }
-  </script>
-</header>
+
+    function closeDropdown(dropdown, arrow = null) {
+      dropdown.classList.add('opacity-0', 'invisible', 'scale-95');
+      dropdown.classList.remove('opacity-100', 'visible', 'scale-100');
+      if (arrow) {
+        arrow.classList.remove('rotate-180');
+      }
+    }
+
+    // Handle escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdownMenus.forEach(menu => closeDropdown(menu));
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      }
+    });
+  });
+</script>
