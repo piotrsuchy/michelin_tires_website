@@ -15,47 +15,49 @@
   </div>
 
   <!-- Main Content -->
-  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-    <!-- Text Content -->
-    <div class="md:col-span-3">
-      <div class="prose max-w-none text-gray-700 mb-8">
-        {{ .Content | safeHTML }}
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Size Table (Left) -->
+      {{ if .Params.size_table }}
+      <div class="lg:col-span-4">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="bg-gray-50 px-4 py-3 border-b">
+            <h3 class="text-base font-semibold text-gray-800">Available Sizes</h3>
+          </div>
+          <div class="p-4">
+            <img src="{{ .Params.size_table }}" alt="{{ .Title }} - Available Sizes"
+              class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
+          </div>
+        </div>
       </div>
-    </div>
+      {{ end }}
 
-    <!-- Featured Image -->
-    <div>
+      <!-- Text Content (Middle - Optional) -->
+      {{ if .Content }}
+      <div
+        class="{{ if and .Params.size_table .Params.featured_image }}lg:col-span-4{{ else if or .Params.size_table .Params.featured_image }}lg:col-span-8{{ else }}lg:col-span-12{{ end }}">
+        <div class="prose max-w-none text-gray-700">
+          {{ .Content | safeHTML }}
+        </div>
+      </div>
+      {{ end }}
+
+      <!-- Featured Image (Right) -->
       {{ if .Params.featured_image }}
-      <div class="p-4">
-        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}"
-          class="rounded shadow-lg mx-auto w-full h-auto object-contain">
+      <div
+        class="{{ if and .Params.size_table .Content }}lg:col-span-4{{ else if or .Params.size_table .Content }}lg:col-span-8{{ else }}lg:col-span-12{{ end }}">
+        <div class="p-4 flex justify-start items-start">
+          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="rounded shadow-lg object-contain"
+            style="{{ if .Params.featured_image_size }}width: {{ .Params.featured_image_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+        </div>
       </div>
       {{ end }}
     </div>
   </div>
 
-  <!-- Table Images Section -->
-  {{ if or .Params.size_table .Params.spec_table }}
-  <div class="max-w-7xl mx-auto px-4 py-8 border-t border-gray-200">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Technical Specifications</h2>
-
-    <!-- Size Table - Small, Top Left -->
-    {{ if .Params.size_table }}
-    <div class="mb-8 flex justify-start">
-      <div class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
-        <div class="bg-gray-50 px-4 py-3 border-b">
-          <h3 class="text-base font-semibold text-gray-800">Available Sizes</h3>
-        </div>
-        <div class="p-4">
-          <img src="{{ .Params.size_table }}" alt="{{ .Title }} - Available Sizes"
-            class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
-        </div>
-      </div>
-    </div>
-    {{ end }}
-
-    <!-- Spec Table - Full Width Below -->
-    {{ if .Params.spec_table }}
+  <!-- Spec Table - Full Width Below -->
+  {{ if .Params.spec_table }}
+  <div class="max-w-7xl mx-auto px-4 pb-8">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="bg-gray-50 px-6 py-4 border-b">
         <h3 class="text-lg font-semibold text-gray-800">Technical Specifications</h3>
@@ -65,7 +67,6 @@
           class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
       </div>
     </div>
-    {{ end }}
   </div>
   {{ end }}
 </section>
