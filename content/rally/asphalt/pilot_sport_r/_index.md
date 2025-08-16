@@ -1,6 +1,6 @@
 ---
 title: "Pilot Sport R"
-featured_image_1: "/images/two_sides/2.png"
+featured_image_1: "/images/two_sides/1.png"
 featured_image_1_size: "100%"
 featured_image_2: "/images/pressure.png"
 featured_image_2_size: "100%"

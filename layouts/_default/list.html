@@ -16,39 +16,67 @@
 
   <!-- Check if this is a tire subpage (has featured_image_1) -->
   {{ if .Params.featured_image_1 }}
-  <!-- Tire Subpage Layout - 3 Column Layout -->
-  <div class="max-w-7xl mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+  <!-- Tire Subpage Layout - Perfectly Aligned 3 Column Layout -->
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Top Row: 3 Equal Columns with 16px Gaps -->
+    <div class="flex flex-col lg:flex-row justify-center items-start mb-6" style="gap: 16px;">
 
-      <!-- Featured Image 1 (Left) -->
-      <div class="lg:col-span-4">
-        <div class="p-4 flex justify-center items-start">
-          <img src="{{ .Params.featured_image_1 }}" alt="{{ .Title }} - Side 1" class="rounded shadow-lg object-contain"
-            style="{{ if .Params.featured_image_1_size }}width: {{ .Params.featured_image_1_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+      <!-- Featured Image 1 (Left) - Tire Image -->
+      <div class="w-full lg:flex-1 lg:max-w-xs">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden"
+          style="height: 320px; width: 100%; max-width: 320px; margin: 0 auto;">
+          <div class="h-full flex items-center justify-center p-6">
+            <img src="{{ .Params.featured_image_1 }}" alt="{{ .Title }} - Tire Image"
+              class="max-w-full max-h-full object-contain rounded">
+          </div>
         </div>
       </div>
 
       <!-- Size Table (Middle) -->
       {{ if .Params.size_table }}
-      <div class="lg:col-span-4">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="w-full lg:flex-1 lg:max-w-xs">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden"
+          style="height: 320px; width: 100%; max-width: 320px; margin: 0 auto;">
           <div class="bg-gray-50 px-4 py-3 border-b">
-            <h3 class="text-base font-semibold text-gray-800">Available Sizes</h3>
+            <h3 class="text-sm font-semibold text-gray-800 text-center">Available Sizes</h3>
           </div>
-          <div class="p-4">
+          <div class="p-3 overflow-auto" style="height: calc(100% - 3rem);">
             <img src="{{ .Params.size_table }}" alt="{{ .Title }} - Available Sizes"
-              class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
+              class="w-full h-auto object-contain rounded-md">
+          </div>
+        </div>
+      </div>
+      {{ else }}
+      <!-- Empty middle column if no size table -->
+      <div class="w-full lg:flex-1 lg:max-w-xs">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden"
+          style="height: 320px; width: 100%; max-width: 320px; margin: 0 auto;">
+          <div class="h-full flex items-center justify-center text-gray-400">
+            <span class="text-sm">No size information</span>
           </div>
         </div>
       </div>
       {{ end }}
 
-      <!-- Featured Image 2 (Right) -->
+      <!-- Featured Image 2 (Right) - Pressure Chart -->
       {{ if .Params.featured_image_2 }}
-      <div class="lg:col-span-4">
-        <div class="p-4 flex justify-center items-start">
-          <img src="{{ .Params.featured_image_2 }}" alt="{{ .Title }} - Side 2" class="rounded shadow-lg object-contain"
-            style="{{ if .Params.featured_image_2_size }}width: {{ .Params.featured_image_2_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+      <div class="w-full lg:flex-1 lg:max-w-xs">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden"
+          style="height: 320px; width: 100%; max-width: 320px; margin: 0 auto;">
+          <div class="h-full flex items-center justify-center p-6">
+            <img src="{{ .Params.featured_image_2 }}" alt="{{ .Title }} - Pressure Chart"
+              class="max-w-full max-h-full object-contain rounded">
+          </div>
+        </div>
+      </div>
+      {{ else }}
+      <!-- Empty right column if no second image -->
+      <div class="w-full lg:flex-1 lg:max-w-xs">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden"
+          style="height: 320px; width: 100%; max-width: 320px; margin: 0 auto;">
+          <div class="h-full flex items-center justify-center text-gray-400">
+            <span class="text-sm">No pressure information</span>
+          </div>
         </div>
       </div>
       {{ end }}
@@ -56,16 +84,17 @@
     </div>
   </div>
 
-  <!-- Spec Table - Full Width Below -->
+  <!-- Spec Table - Exactly matches the width of the 3 columns above -->
   {{ if .Params.spec_table }}
-  <div class="max-w-7xl mx-auto px-4 pb-8">
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 pb-8">
+    <!-- Total width: 3 × 320px + 2 × 16px = 992px -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden mx-auto" style="width: 992px; max-width: 100%;">
       <div class="bg-gray-50 px-6 py-4 border-b">
-        <h3 class="text-lg font-semibold text-gray-800">Technical Specifications</h3>
+        <h3 class="text-lg font-semibold text-gray-800 text-center">Technical Specifications</h3>
       </div>
       <div class="p-6">
         <img src="{{ .Params.spec_table }}" alt="{{ .Title }} - Technical Specifications"
-          class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
+          class="w-full h-auto rounded-md shadow-sm">
       </div>
     </div>
   </div>
