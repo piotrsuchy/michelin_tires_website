@@ -14,10 +14,21 @@
     <h1 class="text-3xl font-bold text-center">{{ .Title }}</h1>
   </div>
 
-  <!-- Main Content -->
+  <!-- Check if this is a tire subpage (has featured_image_1) -->
+  {{ if .Params.featured_image_1 }}
+  <!-- Tire Subpage Layout - 3 Column Layout -->
   <div class="max-w-7xl mx-auto px-4 py-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <!-- Size Table (Left) -->
+
+      <!-- Featured Image 1 (Left) -->
+      <div class="lg:col-span-4">
+        <div class="p-4 flex justify-center items-start">
+          <img src="{{ .Params.featured_image_1 }}" alt="{{ .Title }} - Side 1" class="rounded shadow-lg object-contain"
+            style="{{ if .Params.featured_image_1_size }}width: {{ .Params.featured_image_1_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+        </div>
+      </div>
+
+      <!-- Size Table (Middle) -->
       {{ if .Params.size_table }}
       <div class="lg:col-span-4">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -32,26 +43,16 @@
       </div>
       {{ end }}
 
-      <!-- Text Content (Middle - Optional) -->
-      {{ if .Content }}
-      <div
-        class="{{ if and .Params.size_table .Params.featured_image }}lg:col-span-4{{ else if or .Params.size_table .Params.featured_image }}lg:col-span-8{{ else }}lg:col-span-12{{ end }}">
-        <div class="prose max-w-none text-gray-700">
-          {{ .Content | safeHTML }}
+      <!-- Featured Image 2 (Right) -->
+      {{ if .Params.featured_image_2 }}
+      <div class="lg:col-span-4">
+        <div class="p-4 flex justify-center items-start">
+          <img src="{{ .Params.featured_image_2 }}" alt="{{ .Title }} - Side 2" class="rounded shadow-lg object-contain"
+            style="{{ if .Params.featured_image_2_size }}width: {{ .Params.featured_image_2_size }};{{ else }}width: 100%;{{ end }} height: auto;">
         </div>
       </div>
       {{ end }}
 
-      <!-- Featured Image (Right) -->
-      {{ if .Params.featured_image }}
-      <div
-        class="{{ if and .Params.size_table .Content }}lg:col-span-4{{ else if or .Params.size_table .Content }}lg:col-span-8{{ else }}lg:col-span-12{{ end }}">
-        <div class="p-4 flex justify-start items-start">
-          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="rounded shadow-lg object-contain"
-            style="{{ if .Params.featured_image_size }}width: {{ .Params.featured_image_size }};{{ else }}width: 100%;{{ end }} height: auto;">
-        </div>
-      </div>
-      {{ end }}
     </div>
   </div>
 
@@ -69,5 +70,28 @@
     </div>
   </div>
   {{ end }}
+
+  {{ else }}
+  <!-- Main Category Page Layout (Original) -->
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+    <!-- Text Content -->
+    <div class="md:col-span-3">
+      <div class="prose max-w-none text-gray-700 mb-8">
+        {{ .Content | safeHTML }}
+      </div>
+    </div>
+
+    <!-- Featured Image -->
+    <div>
+      {{ if .Params.featured_image }}
+      <div class="p-4">
+        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}"
+          class="rounded shadow-lg mx-auto w-full h-auto object-contain">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
 </section>
 {{ end }}

@@ -1,0 +1,77 @@
+{{ define "main" }}
+<section>
+    <!-- Banner Section -->
+    {{ if .Params.banner_image }}
+    <div class="relative w-full h-48 md:h-64"
+        style="background-image: url('{{ .Params.banner_image }}'); {{ if .Params.banner_position }}background-position: {{ .Params.banner_position }};{{ else }}background-position: center;{{ end }} {{ if .Params.banner_size }}background-size: {{ .Params.banner_size }};{{ else }}background-size: cover;{{ end }}">
+        <!-- Optional Overlay (if needed) -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    </div>
+    {{ end }}
+
+    <!-- Title Bar -->
+    <div class="bg-gray-900 text-white py-4">
+        <h1 class="text-3xl font-bold text-center">{{ .Title }}</h1>
+    </div>
+
+    <!-- Main Content - 3 Column Layout for Subpages -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            <!-- Featured Image 1 (Left) -->
+            {{ if .Params.featured_image_1 }}
+            <div class="lg:col-span-4">
+                <div class="p-4 flex justify-center items-start">
+                    <img src="{{ .Params.featured_image_1 }}" alt="{{ .Title }} - Side 1"
+                        class="rounded shadow-lg object-contain"
+                        style="{{ if .Params.featured_image_1_size }}width: {{ .Params.featured_image_1_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+                </div>
+            </div>
+            {{ end }}
+
+            <!-- Size Table (Middle) -->
+            {{ if .Params.size_table }}
+            <div class="lg:col-span-4">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 px-4 py-3 border-b">
+                        <h3 class="text-base font-semibold text-gray-800">Available Sizes</h3>
+                    </div>
+                    <div class="p-4">
+                        <img src="{{ .Params.size_table }}" alt="{{ .Title }} - Available Sizes"
+                            class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+            <!-- Featured Image 2 (Right) -->
+            {{ if .Params.featured_image_2 }}
+            <div class="lg:col-span-4">
+                <div class="p-4 flex justify-center items-start">
+                    <img src="{{ .Params.featured_image_2 }}" alt="{{ .Title }} - Side 2"
+                        class="rounded shadow-lg object-contain"
+                        style="{{ if .Params.featured_image_2_size }}width: {{ .Params.featured_image_2_size }};{{ else }}width: 100%;{{ end }} height: auto;">
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+    </div>
+
+    <!-- Spec Table - Full Width Below -->
+    {{ if .Params.spec_table }}
+    <div class="max-w-7xl mx-auto px-4 pb-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b">
+                <h3 class="text-lg font-semibold text-gray-800">Technical Specifications</h3>
+            </div>
+            <div class="p-6">
+                <img src="{{ .Params.spec_table }}" alt="{{ .Title }} - Technical Specifications"
+                    class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+</section>
+{{ end }}
