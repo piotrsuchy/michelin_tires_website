@@ -7,6 +7,7 @@
   - add all tables
 - pages:
   - add all carousel tire choice
+- modify the pressure.png table to be of a different type per type
 - cookies handling
 - price tab
 

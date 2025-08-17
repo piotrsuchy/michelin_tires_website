@@ -10,4 +10,6 @@ Michelin asphalt rally tires are optimized for maximum grip and handling on tarm
 
 - [Pilot Sport Pro Rally](pilot_sport_pro_rally/)
 - [Pilot Sport A](pilot_sport_a/)
+- [Pilot Sport A - MW1](pilot_sport_a_mw1/)
 - [Pilot Sport R](pilot_sport_r/)
+- [Pilot Sport R - GT version](pilot_sport_r_gt/)

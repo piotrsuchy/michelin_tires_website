@@ -8,4 +8,4 @@ Michelin Porsche Cup tires are specially designed for the prestigious Porsche Cu
 ## Available Tire Models
 
 - [Pilot Sport Cup N3 & N3R](pilot_sport_cup_n3_n3r/)
-- [Pilot Sport Cup N2 & N2R](pilot_sport_cup_n2_n2r/)
+- [Porsche Cup N2 & N2R](porsche_cup_n2_n2r/)
