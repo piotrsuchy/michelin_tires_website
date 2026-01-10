@@ -1,83 +1,130 @@
-<header class="bg-[#004B93] text-white shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+<header class="bg-[#004B93] text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo/Brand Name -->
-    <a href="/" class="flex items-center space-x-2 hover:opacity-90 transition-opacity">
-      <img src="/images/michelin_logo_2.png" alt="PS-Sport Sport Tires Logo" class="h-8 w-auto" />
-      <span class="text-xl font-bold">PS-Sport Sport Tires</span>
+    <a href="/" class="group flex items-center gap-3">
+      <div class="relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
+        <img src="/images/michelin_logo_2.png" alt="PS-Sport Sport Tires Logo" class="h-10 w-auto drop-shadow-md" />
+      </div>
+      <div class="flex flex-col">
+        <span
+          class="text-xl font-extrabold tracking-tight uppercase italic leading-none text-white group-hover:text-[#FFCD00] transition-colors">PS-Sport</span>
+        <span class="text-xs font-medium tracking-widest text-gray-300 uppercase">Motorsport Tires</span>
+      </div>
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center space-x-1">
+    <nav class="hidden md:flex items-center gap-1">
       <a href="/"
-        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Home</a>
+        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        Home
+        <span
+          class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+      </a>
 
       <!-- Rally Dropdown -->
-      <div class="relative">
+      <div class="relative group">
         <button
-          class="dropdown-toggle px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200 flex items-center"
+          class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="rally-dropdown">
-          Rally
-          <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
+          <span>Rally</span>
+          <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        <!-- Invisible bridge to prevent closing when moving to menu -->
+        <div class="absolute top-full left-0 w-full h-2"></div>
+
         <div id="rally-dropdown"
-          class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 opacity-0 invisible transform scale-95 transition-all duration-200 ease-out">
-          <div class="py-1">
+          class="dropdown-menu absolute left-0 mt-3 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform opacity-0 scale-95 invisible transition-all duration-200 origin-top-left group-hover:opacity-100 group-hover:scale-100 group-hover:visible">
+          <div class="py-2">
+            <div
+              class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
+              Categories
+            </div>
             <a href="/rally/asphalt"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Asphalt</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Asphalt</span>
+            </a>
             <a href="/rally/gravel"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Gravel</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Gravel</span>
+            </a>
             <a href="/rally/snow_and_ice"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Snow
-              & Ice</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Snow & Ice</span>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Circuit Dropdown -->
-      <div class="relative">
+      <div class="relative group">
         <button
-          class="dropdown-toggle px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200 flex items-center"
+          class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="circuit-dropdown">
-          Circuit
-          <svg class="ml-1 h-4 w-4 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
+          <span>Circuit</span>
+          <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+        <!-- Invisible bridge -->
+        <div class="absolute top-full left-0 w-full h-2"></div>
+
         <div id="circuit-dropdown"
-          class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 opacity-0 invisible transform scale-95 transition-all duration-200 ease-out">
-          <div class="py-1">
+          class="dropdown-menu absolute left-0 mt-3 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform opacity-0 scale-95 invisible transition-all duration-200 origin-top-left group-hover:opacity-100 group-hover:scale-100 group-hover:visible">
+          <div class="py-2">
+            <div
+              class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
+              Series
+            </div>
             <a href="/circuit/prototype_formula"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Prototype
-              Formula</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Prototype Formula</span>
+            </a>
             <a href="/circuit/touring_gt"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Touring
-              GT</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Touring GT</span>
+            </a>
             <a href="/circuit/porsche_cup"
-              class="block px-4 py-2 text-gray-700 hover:bg-[#004B93] hover:text-white transition-colors duration-150">Porsche
-              Cup</a>
+              class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
+              <span class="font-medium">Porsche Cup</span>
+            </a>
           </div>
         </div>
       </div>
 
       <a href="/hillclimbing"
-        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Hillclimbing</a>
+        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        Hillclimbing
+        <span
+          class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+      </a>
       <a href="/raid"
-        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Raid</a>
+        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        Raid
+        <span
+          class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+      </a>
+
+      <!-- Contact Button -->
       <a href="/contact"
-        class="px-3 py-2 rounded-md hover:bg-[#003366] hover:text-[#FFCD00] transition-all duration-200">Contact Us</a>
+        class="ml-4 px-6 py-2.5 rounded-full bg-[#FFCD00] text-[#004B93] text-sm font-bold uppercase tracking-wide hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+        Contact Us
+      </a>
     </nav>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
-      <button id="mobile-menu-button"
-        class="p-2 rounded-md hover:bg-[#003366] focus:outline-none focus:ring-2 focus:ring-[#FFCD00] transition-colors">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-button" class="p-2 text-white hover:text-[#FFCD00] focus:outline-none transition-colors">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16" />
           <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -88,35 +135,57 @@
   </div>
 
   <!-- Mobile Nav -->
-  <div id="mobile-menu" class="md:hidden hidden bg-[#003366] border-t border-[#002244]">
-    <nav class="px-4 py-3 space-y-1">
-      <a href="/" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Home</a>
+  <div id="mobile-menu" class="md:hidden hidden bg-[#003366] border-t border-[#004B93] shadow-inner">
+    <nav class="px-4 py-4 space-y-2">
+      <a href="/"
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Home</a>
 
       <!-- Rally Mobile Section -->
-      <div class="py-1">
-        <div class="px-3 py-1 text-[#FFCD00] font-semibold text-sm uppercase tracking-wide">Rally</div>
-        <a href="/rally/asphalt"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Asphalt</a>
-        <a href="/rally/gravel"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Gravel</a>
-        <a href="/rally/snow_and_ice"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Snow & Ice</a>
+      <div class="space-y-1">
+        <button
+          class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] transition-all"
+          onclick="this.nextElementSibling.classList.toggle('hidden')">
+          <span>Rally</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="hidden grid bg-[rgb(0,50,100)] rounded-lg overflow-hidden py-2 ml-4 border-l-2 border-[#FFCD00]">
+          <a href="/rally/asphalt"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Asphalt</a>
+          <a href="/rally/gravel"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Gravel</a>
+          <a href="/rally/snow_and_ice"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Snow & Ice</a>
+        </div>
       </div>
 
       <!-- Circuit Mobile Section -->
-      <div class="py-1">
-        <div class="px-3 py-1 text-[#FFCD00] font-semibold text-sm uppercase tracking-wide">Circuit</div>
-        <a href="/circuit/prototype_formula"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Prototype Formula</a>
-        <a href="/circuit/touring_gt"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Touring GT</a>
-        <a href="/circuit/porsche_cup"
-          class="block px-6 py-2 text-sm rounded-md hover:bg-[#004B93] transition-colors">Porsche Cup</a>
+      <div class="space-y-1">
+        <button
+          class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] transition-all"
+          onclick="this.nextElementSibling.classList.toggle('hidden')">
+          <span>Circuit</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="hidden grid bg-[#003366] rounded-lg overflow-hidden py-2 ml-4 border-l-2 border-[#FFCD00]">
+          <a href="/circuit/prototype_formula"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Prototype Formula</a>
+          <a href="/circuit/touring_gt"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Touring GT</a>
+          <a href="/circuit/porsche_cup"
+            class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Porsche Cup</a>
+        </div>
       </div>
 
-      <a href="/hillclimbing" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Hillclimbing</a>
-      <a href="/raid" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Raid</a>
-      <a href="/contact" class="block px-3 py-2 rounded-md hover:bg-[#004B93] transition-colors">Contact Us</a>
+      <a href="/hillclimbing"
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Hillclimbing</a>
+      <a href="/raid"
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Raid</a>
+      <a href="/contact"
+        class="block px-4 py-3 rounded-lg bg-[#FFCD00] text-[#004B93] font-bold text-center mt-4">Contact Us</a>
     </nav>
   </div>
 </header>
