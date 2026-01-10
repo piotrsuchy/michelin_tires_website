@@ -8,5 +8,7 @@ Michelin prototype formula and single-seater tires are designed for ultimate rac
 
 ## Available Tire Models
 
-- [Pilot Sport M S512 / P512](pilot_sport_m_s512_p512/)
-- [Pilot Sport Legends S819 / P219](pilot_sport_legends_s819_p219/)
+- [Pilot Sport M S512](pilot_sport_m_s512/)
+- [Pilot Sport M P512](pilot_sport_m_p512/)
+- [Pilot Sport Legends S819](pilot_sport_legends_s819/)
+- [Pilot Sport Legends P219](pilot_sport_legends_p219/)

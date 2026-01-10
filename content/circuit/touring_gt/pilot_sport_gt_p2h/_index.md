@@ -1,10 +1,7 @@
 ---
 title: "Pilot Sport GT P2H"
-featured_image_1: "/images/two_sides/1.png"
-featured_image_1_size: "80%"
-featured_image_2: "/images/pressure.png"
-featured_image_2_size: "80%"
+featured_image_1: "/images/subpages/touring_gt/pilot_sport_gt_p2h/tire.png"
 banner_image: "/images/background.png"
-size_table: "/images/tables/pilot_sport_gt_p2h_size.png"
-spec_table: "/images/tables/pilot_sport_gt_p2h_spec.png"
+size_table: "/images/subpages/touring_gt/pilot_sport_gt_p2h/size.png"
+spec_table: "/images/subpages/touring_gt/pilot_sport_gt_p2h/spec.png"
 ---

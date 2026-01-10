@@ -1,9 +1,7 @@
 ---
 title: "Pilot Sport Pro GT"
-featured_image_1: "/images/two_sides/1.png"
-featured_image_1_size: "80%"
-featured_image_2: "/images/pressure.png"
-featured_image_2_size: "80%"
+spec_table: "/images/subpages/touring_gt/pilot_sport_pro_gt/spec.png"
+featured_image_1: "/images/subpages/touring_gt/pilot_sport_pro_gt/tire.png"
 banner_image: "/images/background.png"
-size_table: "/images/tables/pilot_sport_pro_gt_size.png"
+size_table: "/images/subpages/touring_gt/pilot_sport_pro_gt/size.png"
 ---

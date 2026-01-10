@@ -1,10 +1,9 @@
 ---
-title: "Pilot Sport H S5C+"
-featured_image_1: "/images/hillclimbing-tire.png"
-featured_image_1_size: "80%"
-featured_image_2: "/images/pressure.png"
-featured_image_2_size: "80%"
-banner_image: "/images/background.png"
-size_table: "/images/tables/pilot_sport_h_s5c_+_size.png"
-spec_table: "/images/tables/pilot_sport_h_s5c_+_spec.png"
+title: "Pilot Sport H S5C "
+banner_image: "/images/background/hillclimbing.jpg"
+banner_position: "center 80%"
+spec_table: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/spec.png"
+size_table: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/size.png"
+featured_image_1: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/tire.png"
 ---
+Thanks to a new synthetic tread compound, the MICHELIN Pilot Sport S5C+ offers instant grip and good consistency during a hill climb.

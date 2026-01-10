@@ -11,3 +11,5 @@ Michelin gravel tires are built for versatility and performance on loose surface
 
 - [Pilot Sport Gravel](pilot_sport_gravel/)
 - [LTX Force T](ltx_force_t/)
+- [LTX Force T XL](ltx_force_t_xl/)
+
