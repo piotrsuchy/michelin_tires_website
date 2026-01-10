@@ -1,5 +1,5 @@
 ---
-title: "Pilot Sport H S5C "
+title: "Pilot Sport H S5C+"
 banner_image: "/images/background/hillclimbing.jpg"
 banner_position: "center 80%"
 spec_table: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/spec.png"
