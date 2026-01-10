@@ -1,6 +1,5 @@
 ---
 title: "Snow & Ice"
-featured_image: "/images/snow-and-ice-tire.png"
 banner_image: "/images/background/snow-and-ice.jpg"
 banner_position: "center 80%"
 ---

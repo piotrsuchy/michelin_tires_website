@@ -1,6 +1,5 @@
 ---
 title: "Raid"
-featured_image: "/images/hillclimbing-tire.png"
 banner_image: "/images/background/raid.jpg"
 banner_position: "center 65%"
 ---

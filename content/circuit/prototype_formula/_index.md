@@ -1,6 +1,5 @@
 ---
 title: "Prototype Formula & Single-Seater"
-featured_image: "/images/circuit-formule-prototype.png"
 banner_image: "/images/background/formula-prototype.jpg"
 banner_position: "center 70%"
 ---

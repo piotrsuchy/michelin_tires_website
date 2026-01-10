@@ -1,7 +1,6 @@
 ---
 title: "Gravel"
-featured_image: "/images/gravel-tire.png"
-banner_image: "/images/background/gravel5.jpg"
+banner_image: "/images/background/gravel.jpg"
 banner_position: "center 60%"
 banner_size: "cover"
 ---

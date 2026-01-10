@@ -1,6 +1,5 @@
 ---
 title: "Hillclimbing"
-featured_image: "/images/hillclimbing-tire.png"
 banner_image: "/images/background/hillclimbing.jpg"
 banner_position: "center 80%"
 ---
