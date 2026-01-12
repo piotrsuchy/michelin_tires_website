@@ -84,6 +84,14 @@
       </div>
     </div>
 
+    <!-- Specialized Raid Table Image -->
+    {{ if .Params.raid_table }}
+    <div class="flex justify-center my-12 px-4">
+      <img src="{{ .Params.raid_table }}" alt="{{ .Title }} Data"
+        class="max-w-5xl w-full h-auto rounded-xl shadow-lg border border-gray-100">
+    </div>
+    {{ end }}
+
     <!-- Dynamic Tire Grid -->
     {{ if .Pages }}
     <!-- Increased columns to lg:grid-cols-4 and reduced gap to make cards smaller -->
@@ -120,8 +128,10 @@
             class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
           </div>
 
-          {{ if .Summary }}
-          <p class="text-gray-500 mb-6 flex-grow line-clamp-3 leading-snug text-sm">{{ .Summary }}</p>
+          {{ if .Content }}
+          <p class="text-gray-500 mb-6 flex-grow leading-snug text-sm">
+            {{ .Content | plainify | truncate 120 "..." }}
+          </p>
           {{ end }}
 
           <button
@@ -146,6 +156,32 @@
       <p class="text-gray-500 text-lg">No tire models available in this category yet.</p>
     </div>
     {{ end }}
+    {{ end }}
+
+    <!-- Optional Bottom Spec Image for Aggregator Pages -->
+    {{ if .Params.main_spec_table }}
+    <div class="max-w-7xl mx-auto flex flex-col items-center" style="margin-top: 80px;">
+
+      <!-- Interactive Toggle Tab -->
+      <button
+        onclick="const el = document.getElementById('spec-table-container'); el.classList.toggle('hidden'); this.querySelector('span').textContent = el.classList.contains('hidden') ? 'Show Technical Data Table' : 'Hide Technical Data Table';"
+        class="group flex items-center gap-2 px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full hover:border-[#004B93] hover:text-[#004B93] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+        aria-expanded="false">
+        <span class="text-sm font-bold uppercase tracking-wide">Show Technical Data Table</span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Collapsible Container -->
+      <div id="spec-table-container"
+        class="hidden mt-8 w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-2">
+        <img src="{{ .Params.main_spec_table }}" alt="{{ .Title }} Specifications" class="w-full h-auto rounded-xl">
+      </div>
+
+    </div>
     {{ end }}
   </div>
   {{ end }}
