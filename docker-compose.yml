@@ -1,0 +1,18 @@
+services:
+  website:
+    build:
+      context: .
+      target: dev
+    container_name: michelin_website_dev
+    ports:
+      - "1313:1313"
+    volumes:
+      # Mount the current directory to /app for live reload
+      - .:/app
+      # Use a volume for node_modules to preserve container-installed packages
+      - node_modules:/app/node_modules
+    environment:
+      - HUGO_ENV=development
+
+volumes:
+  node_modules:
