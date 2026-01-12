@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" href="/favicon-32.png">
   {{ $style := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
 
 <body class="flex flex-col min-h-screen text-gray-900">
