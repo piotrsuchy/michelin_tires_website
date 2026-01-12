@@ -6,3 +6,4 @@ banner_position: "center 80%"
 size_table: "/images/subpages/asphalt/pilot_sport_pro_rally/size.png"
 spec_table: "/images/subpages/asphalt/pilot_sport_pro_rally/spec.png"
 ---
+A versatile and reliable rally tire designed for amateur and pro-am competitors, providing consistent grip and stability across various asphalt conditions.

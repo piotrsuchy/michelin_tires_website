@@ -6,3 +6,4 @@ spec_table: "/images/subpages/prototype_formula/pilot_sport_legends_p219/spec.pn
 size_table: "/images/subpages/prototype_formula/pilot_sport_legends_p219/size.png"
 featured_image_1: "/images/subpages/prototype_formula/pilot_sport_legends_p219/tire.png"
 ---
+Designed for wet conditions in historic racing, the P219 ensures grip and safety for classic prototypes without compromising their authentic driving character.

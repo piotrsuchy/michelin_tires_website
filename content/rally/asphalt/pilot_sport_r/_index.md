@@ -6,3 +6,4 @@ banner_position: "center 80%"
 size_table: "/images/subpages/asphalt/pilot_sport_r/size.png"
 spec_table: "/images/subpages/asphalt/pilot_sport_r/spec.png"
 ---
+Ideally suited to abrasive roads, the Pilot Sport R provides exceptional dry grip and structural rigidity for high-speed cornering stability.

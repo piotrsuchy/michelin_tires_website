@@ -6,4 +6,5 @@ spec_table: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/spec.png"
 size_table: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/size.png"
 featured_image_1: "/images/subpages/hillclimbing/pilot_sport_h_s5c+/tire.png"
 ---
+Engineered specifically for hill climb competitions, this tire delivers immediate warm-up and consistent grip on dry or damp surfaces for maximum performance from the very first corner.
 Thanks to a new synthetic tread compound, the MICHELIN Pilot Sport S5C+ offers instant grip and good consistency during a hill climb.

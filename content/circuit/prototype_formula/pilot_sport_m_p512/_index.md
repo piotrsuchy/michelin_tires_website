@@ -6,3 +6,4 @@ spec_table: "/images/subpages/prototype_formula/pilot_sport_m_p512/spec.png"
 size_table: "/images/subpages/prototype_formula/pilot_sport_m_p512/size.png"
 featured_image_1: "/images/subpages/prototype_formula/pilot_sport_m_p512/tire.png"
 ---
+Engineered for wet conditions in prototype racing, the P512 delivers exceptional water evacuation and grip to maintain speed and safety on rain-soaked tracks.

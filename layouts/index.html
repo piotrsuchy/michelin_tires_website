@@ -10,62 +10,248 @@
 
 <section class="max-w-7xl mx-auto px-4 py-8">
   <!-- Update grid to 4 x 2: 2 rows of 4 items each -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
     <!-- Rally: Asphalt -->
-    <a href="/rally/asphalt" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/asphalt/pilot_sport_a/tire.png" alt="Asphalt Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Asphalt</h2>
+    <a href="/rally/asphalt"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/asphalt/pilot_sport_a/tire.png" alt="Asphalt"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "asphalt" | default "Asphalt" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Rally: Gravel -->
-    <a href="/rally/gravel" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/gravel/pilot_sport_gravel/tire.png" alt="Gravel Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Gravel</h2>
+    <a href="/rally/gravel"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/gravel/pilot_sport_gravel/tire.png" alt="Gravel"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "gravel" | default "Gravel" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Rally: Snow & Ice -->
-    <a href="/rally/snow_and_ice" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/snow_and_ice/pilot_alpin/tire.png" alt="Snow & Ice Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Snow & Ice</h2>
+    <a href="/rally/snow_and_ice"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/snow_and_ice/pilot_alpin/tire.png" alt="Snow & Ice"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "snow_and_ice" | default "Snow & Ice" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Circuit: Prototype Formula -->
-    <a href="/circuit/prototype_formula" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/prototype_formula/pilot_sport_m_s512/tire.png" alt="Prototype Formula Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Prototype Formula</h2>
+    <a href="/circuit/prototype_formula"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/prototype_formula/pilot_sport_m_s512/tire.png" alt="Prototype Formula"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "prototype_formula" | default "Prototype Formula" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Circuit: Touring GT -->
-    <a href="/circuit/touring_gt" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/touring_gt/pilot_sport_gt_m/tire.png" alt="Touring GT Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Touring GT</h2>
+    <a href="/circuit/touring_gt"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/touring_gt/pilot_sport_gt_m/tire.png" alt="Touring GT"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "touring_gt" | default "Touring GT" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
-    <!-- Circuit: Porsche Cup-->
-    <a href="/circuit/porsche_cup" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/porsche_cup/pilot_sport_cup_n3_and_n3r/tire.png" alt="Porsche Cup Tyre"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Porsche Cup</h2>
+    <!-- Circuit: Porsche Cup -->
+    <a href="/circuit/porsche_cup"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/porsche_cup/pilot_sport_cup_n3_and_n3r/tire.png" alt="Porsche Cup"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "porsche_cup" | default "Porsche Cup" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Hillclimbing -->
-    <a href="/hillclimbing" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/subpages/hillclimbing/pilot_sport_h_s5c+/tire.png" alt="Hillclimbing Tire"
-        class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Hillclimbing</h2>
+    <a href="/hillclimbing"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/subpages/hillclimbing/pilot_sport_h_s5c+/tire.png" alt="Hillclimbing"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "hillclimbing" | default "Hillclimbing" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
 
     <!-- Raid -->
-    <a href="/raid" class="block text-center hover:shadow-lg transition-shadow p-4 rounded border">
-      <img src="/images/raid-tire.png" alt="Raid Tire" class="mx-auto mb-4 h-32 object-contain" />
-      <h2 class="text-xl font-semibold text-gray-800">Raid</h2>
+    <a href="/raid"
+      class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+      <div
+        class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+        <div
+          class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+        </div>
+        <img src="/images/raid-tire.png" alt="Raid"
+          class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+      </div>
+      <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+        <h2
+          class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+          {{ T "raid" | default "Raid" }}</h2>
+        <div
+          class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+        </div>
+        <button
+          class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+          {{ T "view_details" | default "View Details" }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+      </div>
     </a>
+
   </div>
 </section>
 {{ end }}

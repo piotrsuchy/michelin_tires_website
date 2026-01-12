@@ -138,9 +138,14 @@
       {{ end }}
     </div>
     {{ else }}
+    <!-- If no pages, we only show the empty message if there is essentially no content to show -->
+    <!-- This allows pages like 'Raid' to just show a big image in the content area without this warning -->
+    {{ $contentLen := len .Content }}
+    {{ if lt $contentLen 50 }}
     <div class="text-center py-20 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
       <p class="text-gray-500 text-lg">No tire models available in this category yet.</p>
     </div>
+    {{ end }}
     {{ end }}
   </div>
   {{ end }}
