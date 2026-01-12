@@ -75,26 +75,74 @@
 
 
   {{ else }}
-  <!-- Main Category Page Layout (Original) -->
-  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-4">
-    <!-- Text Content -->
-    <div class="md:col-span-3">
-      <div class="prose max-w-none text-gray-700 mb-8">
+  <!-- Main Category Page Layout (Dynamic List) -->
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Description Section with Left Alignment -->
+    <div class="max-w-5xl mx-auto mb-8">
+      <div class="prose prose-lg text-gray-700 leading-relaxed max-w-none text-left">
         {{ .Content | safeHTML }}
       </div>
     </div>
 
-    <!-- Featured Image -->
-    <div>
-      {{ if .Params.featured_image }}
-      <div class="p-4">
-        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}"
-          class="rounded shadow-lg mx-auto w-full h-auto object-contain">
-      </div>
+    <!-- Dynamic Tire Grid -->
+    {{ if .Pages }}
+    <!-- Increased columns to lg:grid-cols-4 and reduced gap to make cards smaller -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}"
+        class="group bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full relative">
+
+        <!-- Image Area - Reduced height to h-48 -->
+        <div
+          class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6 relative overflow-hidden group-hover:from-[#004B93]/5 group-hover:to-[#004B93]/10 transition-colors duration-500">
+          <!-- Abstract Decorative Circle -->
+          <div
+            class="absolute w-40 h-40 bg-white rounded-full opacity-60 blur-2xl -top-5 -right-5 transform group-hover:scale-125 transition-transform duration-700">
+          </div>
+
+          {{ if .Params.featured_image_1 }}
+          <img src="{{ .Params.featured_image_1 }}" alt="{{ .Title }}"
+            class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+          {{ else if .Params.featured_image }}
+          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}"
+            class="relative z-10 w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-1 transition-transform duration-500 drop-shadow-md group-hover:drop-shadow-xl">
+          {{ end }}
+        </div>
+
+        <!-- Content Area -->
+        <div class="p-6 flex-grow flex flex-col items-center text-center relative z-20 bg-white">
+          <h2
+            class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#004B93] transition-colors uppercase italic tracking-wider">
+            {{ .Title }}</h2>
+
+          <!-- Decorative Separator -->
+          <div
+            class="w-10 h-1 bg-[#FFCD00] rounded-full mb-3 transform origin-center transition-all duration-300 group-hover:w-16">
+          </div>
+
+          {{ if .Summary }}
+          <p class="text-gray-500 mb-6 flex-grow line-clamp-3 leading-snug text-sm">{{ .Summary }}</p>
+          {{ end }}
+
+          <button
+            class="px-6 py-2 bg-gray-50 text-[#004B93] font-bold rounded-full group-hover:bg-[#FFCD00] group-hover:text-[#004B93] transition-all duration-300 shadow-sm group-hover:shadow-md flex items-center gap-2 uppercase tracking-wide text-xs">
+            {{ T "view_details" | default "View Details" }}
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="h-3 w-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+      </a>
       {{ end }}
     </div>
+    {{ else }}
+    <div class="text-center py-20 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+      <p class="text-gray-500 text-lg">No tire models available in this category yet.</p>
+    </div>
+    {{ end }}
   </div>
   {{ end }}
-
 </section>
 {{ end }}
