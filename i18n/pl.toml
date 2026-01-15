@@ -90,3 +90,18 @@ other = "Dostępne Rozmiary"
 
 [tech_specs]
 other = "Specyfikacja Techniczna"
+
+[show_technical_data]
+other = "Pokaż Tabelę Danych Technicznych"
+
+[hide_technical_data]
+other = "Ukryj Tabelę Danych Technicznych"
+
+[monday_friday_hours]
+other = "Poniedziałek – Piątek: 9:00 – 17:00"
+
+[saturday_status]
+other = "Sobota: niedostępne"
+
+[sunday_status]
+other = "Niedziela: niedostępne"

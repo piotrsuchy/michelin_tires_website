@@ -17,7 +17,7 @@
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-1">
       <a href="{{ "/" | relLangURL }}"
-        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        class="relative px-3 py-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         {{ T "home" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
@@ -26,7 +26,7 @@
       <!-- Rally Dropdown -->
       <div class="relative group">
         <button
-          class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
+          class="dropdown-toggle flex items-center gap-1 px-3 py-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="rally-dropdown">
           <span>{{ T "rally" }}</span>
           <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
@@ -47,17 +47,17 @@
             <a href="{{ "rally/asphalt" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
-              <span class="font-medium">Asphalt</span>
+              <span class="font-medium">{{ T "asphalt" }}</span>
             </a>
             <a href="{{ "rally/gravel" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
-              <span class="font-medium">Gravel</span>
+              <span class="font-medium">{{ T "gravel" }}</span>
             </a>
             <a href="{{ "rally/snow_and_ice" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
-              <span class="font-medium">Snow & Ice</span>
+              <span class="font-medium">{{ T "snow_and_ice" }}</span>
             </a>
           </div>
         </div>
@@ -66,7 +66,7 @@
       <!-- Circuit Dropdown -->
       <div class="relative group">
         <button
-          class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
+          class="dropdown-toggle flex items-center gap-1 px-3 py-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="circuit-dropdown">
           <span>{{ T "circuit" }}</span>
           <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
@@ -104,13 +104,13 @@
       </div>
 
       <a href="{{ "hillclimbing" | relLangURL }}"
-        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        class="relative px-3 py-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         {{ T "hillclimbing" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
       <a href="{{ "raid" | relLangURL }}"
-        class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
+        class="relative px-3 py-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         {{ T "raid" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>

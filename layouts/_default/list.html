@@ -164,10 +164,10 @@
 
       <!-- Interactive Toggle Tab -->
       <button
-        onclick="const el = document.getElementById('spec-table-container'); el.classList.toggle('hidden'); this.querySelector('span').textContent = el.classList.contains('hidden') ? 'Show Technical Data Table' : 'Hide Technical Data Table';"
+        onclick="const el = document.getElementById('spec-table-container'); el.classList.toggle('hidden'); const isHidden = el.classList.contains('hidden'); this.querySelector('span').textContent = isHidden ? '{{ T "show_technical_data" }}' : '{{ T "hide_technical_data" }}';"
         class="group flex items-center gap-2 px-6 py-2 bg-white border border-gray-200 text-gray-700 rounded-full hover:border-[#004B93] hover:text-[#004B93] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
         aria-expanded="false">
-        <span class="text-sm font-bold uppercase tracking-wide">Show Technical Data Table</span>
+        <span class="text-sm font-bold uppercase tracking-wide">{{ T "show_technical_data" }}</span>
         <svg xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
           viewBox="0 0 24 24" stroke="currentColor">
