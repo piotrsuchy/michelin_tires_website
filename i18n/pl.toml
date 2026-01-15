@@ -24,3 +24,69 @@ other = "Rajdy Terenowe"
 
 [view_details]
 other = "Zobacz Szczegóły"
+
+[home]
+other = "Strona Główna"
+
+[rally]
+other = "Rajdy"
+
+[circuit]
+other = "Wyścigi"
+
+[contact_us]
+other = "Kontakt"
+
+[categories]
+other = "Kategorie"
+
+[series]
+other = "Serie"
+
+[contact_heading]
+other = "Kontakt"
+
+[contact_info]
+other = "Dane Kontaktowe"
+
+[phone_igor]
+other = "Telefon (Igor)"
+
+[phone_piotr]
+other = "Telefon (Piotr)"
+
+[email_label]
+other = "E-mail"
+
+[your_name]
+other = "Twoje imię"
+
+[name_placeholder]
+other = "Twoje imię (wymagane)"
+
+[your_email]
+other = "Twój e-mail"
+
+[email_placeholder]
+other = "Twój e-mail (wymagane)"
+
+[subject]
+other = "Temat"
+
+[subject_placeholder]
+other = "Temat"
+
+[your_message]
+other = "Twoja wiadomość"
+
+[message_placeholder]
+other = "Twoja wiadomość"
+
+[send_message]
+other = "Wyślij wiadomość"
+
+[available_sizes]
+other = "Dostępne Rozmiary"
+
+[tech_specs]
+other = "Specyfikacja Techniczna"

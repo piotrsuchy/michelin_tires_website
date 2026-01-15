@@ -6,7 +6,7 @@
 
 <!-- Blue Title Bar -->
 <div class="bg-[#004B93] py-3 text-center">
-  <h1 class="text-3xl font-bold text-white uppercase">Contact Us</h1>
+  <h1 class="text-3xl font-bold text-white uppercase">{{ T "contact_heading" }}</h1>
 </div>
 
 <!-- Contact Section -->
@@ -15,11 +15,11 @@
 
     <!-- Contact Info -->
     <div class="md:w-1/3 bg-gray-100 shadow-md rounded-lg p-6 mb-8 md:mb-0">
-      <h3 class="text-lg font-semibold text-gray-800 mb-4">Contact Information</h3>
+      <h3 class="text-lg font-semibold text-gray-800 mb-4">{{ T "contact_info" }}</h3>
       <p class="text-gray-700 mb-4 leading-relaxed">
-        <strong>Phone (Igor):</strong> +48 533 399 580 (PL / ENG) <br />
-        <strong>Phone (Piotr):</strong> +48 602 611 811 (PL) <br />
-        <strong>Email:</strong> office@ps-sport.pl
+        <strong>{{ T "phone_igor" }}:</strong> +48 533 399 580 (PL / ENG) <br />
+        <strong>{{ T "phone_piotr" }}:</strong> +48 602 611 811 (PL) <br />
+        <strong>{{ T "email_label" }}:</strong> office@ps-sport.pl
       </p>
       <p class="text-gray-500">
         Monday – Friday: 9:00 – 17:00
@@ -39,47 +39,47 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div>
             <label for="name" class="block text-gray-700 font-medium mb-2">
-              Your Name
+              {{ T "your_name" }}
             </label>
             <input type="text" id="name"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
-              placeholder="Your Name (required)" />
+              placeholder="{{ T " name_placeholder" }}" />
           </div>
           <div>
             <label for="email" class="block text-gray-700 font-medium mb-2">
-              Your Email
+              {{ T "your_email" }}
             </label>
             <input type="email" id="email"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
-              placeholder="Your Email (required)" />
+              placeholder="{{ T " email_placeholder" }}" />
           </div>
         </div>
 
         <!-- Row 2: Subject -->
         <div class="mb-6">
           <label for="subject" class="block text-gray-700 font-medium mb-2">
-            Subject
+            {{ T "subject" }}
           </label>
           <input type="text" id="subject"
             class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
-            placeholder="Subject" />
+            placeholder="{{ T " subject_placeholder" }}" />
         </div>
 
         <!-- Row 3: Message -->
         <div class="mb-6">
           <label for="message" class="block text-gray-700 font-medium mb-2">
-            Your Message
+            {{ T "your_message" }}
           </label>
           <textarea id="message" rows="6"
             class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500"
-            placeholder="Your Message"></textarea>
+            placeholder="{{ T " message_placeholder" }}"></textarea>
         </div>
 
         <!-- Submit Button -->
         <div class="text-right">
           <button type="submit"
             class="bg-[#004B93] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#003870] transition-colors">
-            Send Message
+            {{ T "send_message" }}
           </button>
         </div>
       </form>

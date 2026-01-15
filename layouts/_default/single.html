@@ -34,10 +34,10 @@
             <div class="lg:col-span-4">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="bg-gray-50 px-4 py-3 border-b">
-                        <h3 class="text-base font-semibold text-gray-800">Available Sizes</h3>
+                        <h3 class="text-base font-semibold text-gray-800">{{ T "available_sizes" }}</h3>
                     </div>
                     <div class="p-4">
-                        <img src="{{ .Params.size_table }}" alt="{{ .Title }} - Available Sizes"
+                        <img src="{{ .Params.size_table }}" alt="{{ .Title }} - {{ T " available_sizes" }}"
                             class="w-full h-auto rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
                     </div>
                 </div>
@@ -63,7 +63,7 @@
     <div class="max-w-7xl mx-auto px-4 pb-8">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
             <div class="bg-gray-50 px-6 py-4 border-b">
-                <h3 class="text-lg font-semibold text-gray-800">Technical Specifications</h3>
+                <h3 class="text-lg font-semibold text-gray-800">{{ T "tech_specs" }}</h3>
             </div>
             <div class="p-6">
                 <img src="{{ .Params.spec_table }}" alt="{{ .Title }} - Technical Specifications"

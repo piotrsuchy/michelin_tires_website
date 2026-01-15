@@ -24,3 +24,69 @@ other = "Raid"
 
 [view_details]
 other = "View Details"
+
+[home]
+other = "Home"
+
+[rally]
+other = "Rally"
+
+[circuit]
+other = "Circuit"
+
+[contact_us]
+other = "Contact Us"
+
+[categories]
+other = "Categories"
+
+[series]
+other = "Series"
+
+[contact_heading]
+other = "Contact Us"
+
+[contact_info]
+other = "Contact Information"
+
+[phone_igor]
+other = "Phone (Igor)"
+
+[phone_piotr]
+other = "Phone (Piotr)"
+
+[email_label]
+other = "Email"
+
+[your_name]
+other = "Your Name"
+
+[name_placeholder]
+other = "Your Name (required)"
+
+[your_email]
+other = "Your Email"
+
+[email_placeholder]
+other = "Your Email (required)"
+
+[subject]
+other = "Subject"
+
+[subject_placeholder]
+other = "Subject"
+
+[your_message]
+other = "Your Message"
+
+[message_placeholder]
+other = "Your Message"
+
+[send_message]
+other = "Send Message"
+
+[available_sizes]
+other = "Available Sizes"
+
+[tech_specs]
+other = "Technical Specifications"

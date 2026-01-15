@@ -18,7 +18,7 @@
     <nav class="hidden md:flex items-center gap-1">
       <a href="{{ "/" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
-        Home
+        {{ T "home" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
@@ -28,7 +28,7 @@
         <button
           class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="rally-dropdown">
-          <span>Rally</span>
+          <span>{{ T "rally" }}</span>
           <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -42,7 +42,7 @@
           <div class="py-2">
             <div
               class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
-              Categories
+              {{ T "categories" }}
             </div>
             <a href="{{ "rally/asphalt" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
@@ -68,7 +68,7 @@
         <button
           class="dropdown-toggle flex items-center gap-1 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors focus:outline-none group-hover:text-[#FFCD00]"
           data-dropdown="circuit-dropdown">
-          <span>Circuit</span>
+          <span>{{ T "circuit" }}</span>
           <svg class="h-4 w-4 transform transition-transform duration-300 group-hover:rotate-180" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -82,7 +82,7 @@
           <div class="py-2">
             <div
               class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
-              Series
+              {{ T "series" }}
             </div>
             <a href="{{ "circuit/prototype_formula" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
@@ -105,13 +105,13 @@
 
       <a href="{{ "hillclimbing" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
-        Hillclimbing
+        {{ T "hillclimbing" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
       <a href="{{ "raid" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
-        Raid
+        {{ T "raid" }}
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
@@ -129,7 +129,7 @@
       <!-- Contact Button -->
       <a href="{{ "contact" | relLangURL }}"
         class="ml-4 px-6 py-2.5 rounded-full bg-[#FFCD00] text-[#004B93] text-sm font-bold uppercase tracking-wide hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-        Contact Us
+        {{ T "contact_us" }}
       </a>
     </nav>
 
@@ -150,14 +150,15 @@
   <div id="mobile-menu" class="md:hidden hidden bg-[#003366] border-t border-[#004B93] shadow-inner">
     <nav class="px-4 py-4 space-y-2">
       <a href="{{ "/" | relLangURL }}"
-        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Home</a>
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">{{
+        T "home" }}</a>
 
       <!-- Rally Mobile Section -->
       <div class="space-y-1">
         <button
           class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] transition-all"
           onclick="this.nextElementSibling.classList.toggle('hidden')">
-          <span>Rally</span>
+          <span>{{ T "rally" }}</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -177,7 +178,7 @@
         <button
           class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] transition-all"
           onclick="this.nextElementSibling.classList.toggle('hidden')">
-          <span>Circuit</span>
+          <span>{{ T "circuit" }}</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -193,9 +194,11 @@
       </div>
 
       <a href="{{ "hillclimbing" | relLangURL }}"
-        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Hillclimbing</a>
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">{{
+        T "hillclimbing" }}</a>
       <a href="{{ "raid" | relLangURL }}"
-        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Raid</a>
+        class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">{{
+        T "raid" }}</a>
 
       <!-- Mobile Language Switcher -->
       <div class="px-4 py-3 flex gap-4 border-t border-white/10 mt-2 pt-4">
@@ -207,7 +210,8 @@
       </div>
 
       <a href="{{ "contact" | relLangURL }}"
-        class="block px-4 py-3 rounded-lg bg-[#FFCD00] text-[#004B93] font-bold text-center mt-4">Contact Us</a>
+        class="block px-4 py-3 rounded-lg bg-[#FFCD00] text-[#004B93] font-bold text-center mt-4">{{ T "contact_us"
+        }}</a>
     </nav>
   </div>
 </header>
