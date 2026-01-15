@@ -2,12 +2,26 @@
 
 ## TODO
 
-- two language versions: polish and english - to be exchanged with a button on the top right corner of the bar
 - cookies handling
 - 'about us' tab with a gallery
 
-## how to run
+## How to Run
+
+### Development Environment
+Run the website with live reloading enabled:
 
 ```bash
-hugo server -disableFastRender
+docker compose -f docker-compose.yml up
 ```
+
+The website will be available at [http://localhost:1313](http://localhost:1313). 
+Changes to source files will automatically trigger a rebuild.
+
+### Production Environment
+Build and serve the optimized static site using Nginx:
+
+```bash
+docker compose -f docker-compose.prod.yml up --build
+```
+
+The website will be available at [http://localhost](http://localhost).
