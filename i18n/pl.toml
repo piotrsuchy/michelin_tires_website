@@ -1,0 +1,26 @@
+[asphalt]
+other = "Asfalt"
+
+[gravel]
+other = "Szuter"
+
+[snow_and_ice]
+other = "Śnieg i Lód"
+
+[prototype_formula]
+other = "Prototypy Formuły"
+
+[touring_gt]
+other = "Touring GT"
+
+[porsche_cup]
+other = "Puchar Porsche"
+
+[hillclimbing]
+other = "Wyścigi Górskie"
+
+[raid]
+other = "Rajdy Terenowe"
+
+[view_details]
+other = "Zobacz Szczegóły"

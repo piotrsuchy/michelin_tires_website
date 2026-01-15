@@ -1,0 +1,26 @@
+[asphalt]
+other = "Asphalt"
+
+[gravel]
+other = "Gravel"
+
+[snow_and_ice]
+other = "Snow & Ice"
+
+[prototype_formula]
+other = "Prototype Formula"
+
+[touring_gt]
+other = "Touring GT"
+
+[porsche_cup]
+other = "Porsche Cup"
+
+[hillclimbing]
+other = "Hillclimbing"
+
+[raid]
+other = "Raid"
+
+[view_details]
+other = "View Details"

@@ -1,3 +1,13 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
 title = 'PS-Sport Sport Tires'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+
+  [languages.pl]
+    languageName = 'Polski'
+    weight = 2

@@ -1,7 +1,7 @@
 <header class="bg-[#004B93] text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo/Brand Name -->
-    <a href="/" class="group flex items-center gap-3">
+    <a href="{{ "/" | relLangURL }}" class="group flex items-center gap-3">
       <div class="relative overflow-hidden transition-transform duration-300 group-hover:scale-105"
         style="max-height: 40px;">
         <img src="/images/michelin_logo_2.png" alt="PS-Sport Sport Tires Logo" class="h-10 w-auto drop-shadow-md"
@@ -16,7 +16,7 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-1">
-      <a href="/"
+      <a href="{{ "/" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         Home
         <span
@@ -44,17 +44,17 @@
               class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
               Categories
             </div>
-            <a href="/rally/asphalt"
+            <a href="{{ "rally/asphalt" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Asphalt</span>
             </a>
-            <a href="/rally/gravel"
+            <a href="{{ "rally/gravel" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Gravel</span>
             </a>
-            <a href="/rally/snow_and_ice"
+            <a href="{{ "rally/snow_and_ice" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Snow & Ice</span>
@@ -84,17 +84,17 @@
               class="px-4 py-2 bg-gray-50 border-b border-gray-100 text-xs font-bold text-gray-400 uppercase tracking-wider">
               Series
             </div>
-            <a href="/circuit/prototype_formula"
+            <a href="{{ "circuit/prototype_formula" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Prototype Formula</span>
             </a>
-            <a href="/circuit/touring_gt"
+            <a href="{{ "circuit/touring_gt" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Touring GT</span>
             </a>
-            <a href="/circuit/porsche_cup"
+            <a href="{{ "circuit/porsche_cup" | relLangURL }}"
               class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#004B93] transition-colors group/item">
               <span class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/item:bg-[#004B93] transition-colors"></span>
               <span class="font-medium">Porsche Cup</span>
@@ -103,21 +103,31 @@
         </div>
       </div>
 
-      <a href="/hillclimbing"
+      <a href="{{ "hillclimbing" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         Hillclimbing
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
-      <a href="/raid"
+      <a href="{{ "raid" | relLangURL }}"
         class="relative px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:text-[#FFCD00] transition-colors group">
         Raid
         <span
           class="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCD00] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
       </a>
 
+      <!-- Language Switcher -->
+      <div class="hidden md:flex items-center gap-3 ml-4 border-l border-white/20 pl-4">
+        {{ range .AllTranslations }}
+        <a href="{{ .RelPermalink }}"
+          class="text-xs font-bold uppercase tracking-wider transition-colors {{ if eq .Lang $.Lang }}text-[#FFCD00]{{ else }}text-white hover:text-[#FFCD00]{{ end }}">
+          {{ .Language.LanguageName }}
+        </a>
+        {{ end }}
+      </div>
+
       <!-- Contact Button -->
-      <a href="/contact"
+      <a href="{{ "contact" | relLangURL }}"
         class="ml-4 px-6 py-2.5 rounded-full bg-[#FFCD00] text-[#004B93] text-sm font-bold uppercase tracking-wide hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
         Contact Us
       </a>
@@ -139,7 +149,7 @@
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="md:hidden hidden bg-[#003366] border-t border-[#004B93] shadow-inner">
     <nav class="px-4 py-4 space-y-2">
-      <a href="/"
+      <a href="{{ "/" | relLangURL }}"
         class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Home</a>
 
       <!-- Rally Mobile Section -->
@@ -153,11 +163,11 @@
           </svg>
         </button>
         <div class="hidden grid bg-[rgb(0,50,100)] rounded-lg overflow-hidden py-2 ml-4 border-l-2 border-[#FFCD00]">
-          <a href="/rally/asphalt"
+          <a href="{{ "rally/asphalt" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Asphalt</a>
-          <a href="/rally/gravel"
+          <a href="{{ "rally/gravel" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Gravel</a>
-          <a href="/rally/snow_and_ice"
+          <a href="{{ "rally/snow_and_ice" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Snow & Ice</a>
         </div>
       </div>
@@ -173,20 +183,30 @@
           </svg>
         </button>
         <div class="hidden grid bg-[#003366] rounded-lg overflow-hidden py-2 ml-4 border-l-2 border-[#FFCD00]">
-          <a href="/circuit/prototype_formula"
+          <a href="{{ "circuit/prototype_formula" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Prototype Formula</a>
-          <a href="/circuit/touring_gt"
+          <a href="{{ "circuit/touring_gt" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Touring GT</a>
-          <a href="/circuit/porsche_cup"
+          <a href="{{ "circuit/porsche_cup" | relLangURL }}"
             class="block px-4 py-2 text-sm text-gray-200 hover:text-white hover:bg-[#004B93]">Porsche Cup</a>
         </div>
       </div>
 
-      <a href="/hillclimbing"
+      <a href="{{ "hillclimbing" | relLangURL }}"
         class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Hillclimbing</a>
-      <a href="/raid"
+      <a href="{{ "raid" | relLangURL }}"
         class="block px-4 py-3 rounded-lg text-white font-medium hover:bg-[#004B93] hover:text-[#FFCD00] transition-all">Raid</a>
-      <a href="/contact"
+
+      <!-- Mobile Language Switcher -->
+      <div class="px-4 py-3 flex gap-4 border-t border-white/10 mt-2 pt-4">
+        {{ range .AllTranslations }}
+        <a href="{{ .RelPermalink }}" class="text-white font-bold {{ if eq .Lang $.Lang }}text-[#FFCD00]{{ end }}">
+          {{ .Language.LanguageName }}
+        </a>
+        {{ end }}
+      </div>
+
+      <a href="{{ "contact" | relLangURL }}"
         class="block px-4 py-3 rounded-lg bg-[#FFCD00] text-[#004B93] font-bold text-center mt-4">Contact Us</a>
     </nav>
   </div>
