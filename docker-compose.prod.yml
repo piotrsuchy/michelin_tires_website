@@ -7,6 +7,16 @@ services:
     restart: always
     ports:
       - "80:80"
-    # If you need to override nginx config, uncomment and mount:
-    # volumes:
-    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+
+  certbot:
+    image: certbot/certbot
+    container_name: michelin_certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+

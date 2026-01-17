@@ -16,7 +16,13 @@
 
     <!-- Main Content - 3 Column Layout for Subpages -->
     <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Description Section -->
+        <div class="mb-8 text-gray-700 text-lg leading-relaxed">
+            {{ .Content }}
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
 
             <!-- Featured Image 1 (Left) -->
             {{ if .Params.featured_image_1 }}

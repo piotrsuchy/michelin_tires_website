@@ -8,7 +8,7 @@ other = "Szuter"
 other = "Śnieg i Lód"
 
 [prototype_formula]
-other = "Prototypy Formuły"
+other = "Prototype Formula"
 
 [touring_gt]
 other = "Touring GT"
@@ -105,3 +105,10 @@ other = "Sobota: niedostępne"
 
 [sunday_status]
 other = "Niedziela: niedostępne"
+
+[home_title]
+other = "Opony sportowe - Piotr Suchy"
+
+[home_subtitle]
+other = "Ekskluzywny dystrybutor Opon Sportowych Michelin w Polsce"
+
