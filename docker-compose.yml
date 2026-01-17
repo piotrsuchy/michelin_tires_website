@@ -3,7 +3,9 @@ services:
     build:
       context: .
       target: dev
+    image: michelin_website:dev
     container_name: michelin_website_dev
+
     ports:
       - "1313:1313"
     volumes:

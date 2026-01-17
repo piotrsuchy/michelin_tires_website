@@ -3,7 +3,9 @@ services:
     build:
       context: .
       target: prod
+    image: michelin_website:prod
     container_name: michelin_website_prod
+
     restart: always
     ports:
       - "80:80"
