@@ -107,8 +107,17 @@ other = "Saturday: unavailable"
 other = "Sunday: unavailable"
 
 [home_title]
-other = "MOTORSPORT TIRES - PS-SPORT"
+other = "PS-SPORT<br>Motorsport Tires"
 
 [home_subtitle]
 other = "Exclusive Michelin motorsport tire distributor in Poland"
 
+
+[pageNotFound]
+other = "Page Not Found"
+
+[pathDoesNotExist]
+other = "The path you are looking for does not exist."
+
+[backHome]
+other = "Go to PS-SPORT.pl"

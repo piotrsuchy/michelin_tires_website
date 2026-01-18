@@ -107,8 +107,17 @@ other = "Sobota: niedostępne"
 other = "Niedziela: niedostępne"
 
 [home_title]
-other = "Opony sportowe - PS-SPORT"
+other = "PS-SPORT<br>Opony Sportowe"
 
 [home_subtitle]
-other = "Ekskluzywny dystrybutor opon sportowych Michelin w Polsce"
+other = "Wyłączny dystrybutor opon sportowych Michelin w Polsce"
 
+
+[pageNotFound]
+other = "Strona Nie Znaleziona"
+
+[pathDoesNotExist]
+other = "Ścieżka, której szukasz, nie istnieje."
+
+[backHome]
+other = "Przejdź do PS-SPORT.pl"
