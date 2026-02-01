@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full bg-white">
+<!doctype html>
+<html lang="en" class="h-full bg-white scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon-32.png" />
+    {{ $style := resources.Get "css/main.css" | postCSS (dict "config"
+    "./postcss.config.js") | minify | fingerprint }}
+    <link
+      rel="stylesheet"
+      href="{{ $style.RelPermalink }}"
+      integrity="{{ $style.Data.Integrity }}"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ .Site.Title }}</title>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="/favicon-32.png">
-  {{ $style := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-</head>
+  <body class="flex flex-col min-h-screen text-gray-900">
+    <!-- Header/Nav -->
+    {{ partial "header.html" . }}
 
-<body class="flex flex-col min-h-screen text-gray-900">
-  <!-- Header/Nav -->
-  {{ partial "header.html" . }}
+    <!-- Main Content -->
+    <main class="flex-grow">{{ block "main" . }}{{ end }}</main>
 
-  <!-- Main Content -->
-  <main class="flex-grow">
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  <!-- Footer -->
-  {{ partial "footer.html" . }}
-</body>
-
+    <!-- Footer -->
+    {{ partial "footer.html" . }}
+  </body>
 </html>
