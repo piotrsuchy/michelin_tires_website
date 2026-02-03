@@ -107,10 +107,19 @@ other = "Sobota: niedostępne"
 other = "Niedziela: niedostępne"
 
 [home_title]
-other = "PS-SPORT<br>Opony Sportowe"
+other = "Przyczepność,<br>bez kompromisów"
 
 [home_subtitle]
-other = "Wyłączny dystrybutor opon sportowych Michelin w Polsce"
+other = "<strong>PS-SPORT</strong> — wyłączny dystrybutor opon sportowych Michelin w Polsce."
+
+[home_cta]
+other = "Wybierz Opony"
+
+[catalogue]
+other = "Katalog"
+
+[catalogue_description]
+other = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 
 [pageNotFound]

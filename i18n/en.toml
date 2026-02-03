@@ -107,11 +107,19 @@ other = "Saturday: unavailable"
 other = "Sunday: unavailable"
 
 [home_title]
-other = "PS-SPORT<br>Motorsport Tires"
+other = "Pure Grip,<br>without compromise"
 
 [home_subtitle]
-other = "Exclusive Michelin motorsport tire distributor in Poland"
+other = "<strong>PS-SPORT</strong> — exclusive Michelin motorsport tire distributor in Poland"
 
+[home_cta]
+other = "Choose Tires"
+
+[catalogue]
+other = "Catalogue"
+
+[catalogue_description]
+other = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 [pageNotFound]
 other = "Page Not Found"
