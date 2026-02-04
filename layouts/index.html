@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section
-  class="relative bg-cover bg-center min-h-screen home"
+  class="relative bg-cover bg-center min-h-screen min-h-dvh home"
   style="background-image: url('/images/circuit.jpg');"
 >
   <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
@@ -20,7 +20,7 @@
 
     <div class="text-white">
       <h1 class="text-3xl sm:text-4xl md:text-6xl md:leading-[1.1] font-bold uppercase">{{ T "home_title" | safeHTML }}</h1>
-      <p class="text-lg mt-5 text-gray-100">{{ T "home_subtitle" | safeHTML }}</p>
+      <p class="text-md md:text-lg mt-5 text-gray-100">{{ T "home_subtitle" | safeHTML }}</p>
 
       <a href="#categories"
         class="w-full sm:w-auto text-center inline-block mt-12 px-6 py-2.5 rounded-full border-2 border-[#FFD700] text-white text-xl font-bold uppercase tracking-wide hover:bg-white hover:text-[#004B93] hover:border-transparent hover:shadow-lg transition-all duration-300 transform">
@@ -307,7 +307,7 @@
       updateHeader();
     });
 
-    const observer = new IntersectionObserver(
+    const observerForBackground = new IntersectionObserver(
       ([entry]) => {
         isIntersecting = entry.isIntersecting;
         if (!isOpen) updateHeader();
@@ -315,7 +315,19 @@
       { threshold: 0.7 }
     );
 
-    observer.observe(section);
+    // do not animate header background to show it instantly like the mobile navigation if user is at the top of the page
+    // add transition classes after slight scroll to enable smooth background toggle on scroll
+    const observerForTransition = new IntersectionObserver(
+      ([entry]) => {
+        const isIntersecting = entry.isIntersecting;
+        header.classList.toggle("transition-all", !isIntersecting);
+        header.classList.toggle("duration-300", !isIntersecting);
+      },
+      { threshold: 0.9 }
+    );
+
+    observerForBackground.observe(section);
+    observerForTransition.observe(section);
   });
 
 </script>
