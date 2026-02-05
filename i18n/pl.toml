@@ -130,3 +130,15 @@ other = "Ścieżka, której szukasz, nie istnieje."
 
 [backHome]
 other = "Przejdź do PS-SPORT.pl"
+
+[order_cta_title]
+other = "Zainteresowany tą oponą?"
+
+[order_cta_description]
+other = "Aby złożyć zamówienie, skontaktuj się z nami telefonicznie lub mailowo. Nasz zespół pomoże Ci wybrać odpowiednie opony i zorganizować dostawę."
+
+[order_button]
+other = "Zamów teraz"
+
+[order_info_banner]
+other = "Aby zamówić opony, zadzwoń do nas lub wyślij e-mail. Odezwiemy się najszybciej jak to możliwe!"

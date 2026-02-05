@@ -129,3 +129,15 @@ other = "The path you are looking for does not exist."
 
 [backHome]
 other = "Go to PS-SPORT.pl"
+
+[order_cta_title]
+other = "Interested in this tire?"
+
+[order_cta_description]
+other = "To place an order, please contact us by phone or email. Our team will help you choose the right tires and arrange delivery."
+
+[order_button]
+other = "Order Now"
+
+[order_info_banner]
+other = "To order tires, please call us or send an email. We'll get back to you as soon as possible!"
