@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section
-  class="relative bg-cover bg-center min-h-screen min-h-dvh home"
+  class="relative bg-cover bg-center min-h-screen min-h-svh home"
   style="background-image: url('/images/circuit.jpg');"
 >
   <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
@@ -8,7 +8,7 @@
   </video>
   <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
-  <div class="absolute top-[70%] left-[5%] md:top-[55%] md:left-[10%] -translate-y-1/2 max-w-[90vw]">
+  <div class="absolute top-[65%] left-[5%] md:top-[55%] md:left-[10%] -translate-y-1/2 max-w-[90vw]">
     <div class="mb-8">
       <img
         src="/images/michelin_logo_2.png"
@@ -315,19 +315,7 @@
       { threshold: 0.7 }
     );
 
-    // do not animate header background to show it instantly like the mobile navigation if user is at the top of the page
-    // add transition classes after slight scroll to enable smooth background toggle on scroll
-    const observerForTransition = new IntersectionObserver(
-      ([entry]) => {
-        const isIntersecting = entry.isIntersecting;
-        header.classList.toggle("transition-all", !isIntersecting);
-        header.classList.toggle("duration-300", !isIntersecting);
-      },
-      { threshold: 0.9 }
-    );
-
     observerForBackground.observe(section);
-    observerForTransition.observe(section);
   });
   console.log("Build Verification: v1.0.1 - Transitions Update");
 </script>
